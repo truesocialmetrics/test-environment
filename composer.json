@@ -1,0 +1,31 @@
+{
+    "name": "necromant2005/tt-test",
+    "type": "library",
+    "description": "zf test environment",
+    "keywords": ["zf", "zf2", "test", "test case", "environment"],
+    "homepage": "https://github.com/necromant2005/tt-test",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rostislav Mykhajliw",
+            "email": "necromant2005@gmail.com",
+            "homepage": "https://github.com/necromant2005",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "zendframework/zend-mvc": "2.6.*",
+        "zendframework/zend-di": "*",
+        "zendframework/zend-servicemanager": "*",
+        "zendframework/zend-eventmanager": "*",
+        "zendframework/zend-session": "*",
+        "zendframework/zend-http": "*",
+        "zendframework/zend-cache": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Test": "src/"
+        }
+    }
+}
