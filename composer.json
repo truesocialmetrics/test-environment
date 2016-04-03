@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": ">=5.5",
-        "zendframework/zend-mvc": "2.6.*",
+        "zendframework/zend-mvc": "*",
         "zendframework/zend-di": "*",
         "zendframework/zend-servicemanager": "*",
         "zendframework/zend-eventmanager": "*",
