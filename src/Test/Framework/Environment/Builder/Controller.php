@@ -11,14 +11,14 @@ class Controller extends Builder
         $configurations = array_merge([
             ['name' => 'Request'],
             ['name' => 'Response'],
-            ['name' => 'ServiceLocator'],
-            ['name' => 'ServiceLocator|Di'],
-            ['name' => 'ServiceLocator|Zend\Session\Container'],
-            ['name'    => 'ServiceLocator|Stub',
-             'options' => [
-                'class' => 'Zend\Config\Config',
-                'alias' => 'config',
-            ], ],
+            // ['name' => 'ServiceLocator'],
+            // ['name' => 'ServiceLocator|Di'],
+            // ['name' => 'ServiceLocator|Zend\Session\Container'],
+            // ['name'    => 'ServiceLocator|Stub',
+            //  'options' => [
+            //     'class' => 'Zend\Config\Config',
+            //     'alias' => 'config',
+            // ], ],
             ['name' => 'PluginManager'],
             ['name' => 'PluginManager|Forward'],
             ['name' => 'PluginManager|Redirect'],

@@ -33,6 +33,12 @@ class PluginManager extends ZendMvcControllerPluginManager
 
     private $mapping = [];
 
+    public function __construct()
+    {
+        // @HACK
+        // do nothing
+    }
+
     /**
      * Retrieve a registered instance.
      *

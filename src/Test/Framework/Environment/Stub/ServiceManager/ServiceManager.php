@@ -43,4 +43,21 @@ class ServiceManager implements ServiceLocatorInterface
     {
         $this->mapping[$name] = $stub;
     }
+
+    /**
+     * Build a service by its name, using optional options (such services are NEVER cached).
+     *
+     * @param  string $name
+     * @param  null|array  $options
+     * @return mixed
+     * @throws Exception\ServiceNotFoundException If no factory/abstract
+     *     factory could be found to create the instance.
+     * @throws Exception\ServiceNotCreatedException If factory/delegator fails
+     *     to create the instance.
+     * @throws ContainerException if any other error occurs
+     */
+    public function build($name, array $options = null)
+    {
+        return $this->get($name);
+    }
 }
