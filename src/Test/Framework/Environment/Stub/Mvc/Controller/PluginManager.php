@@ -75,4 +75,14 @@ class PluginManager extends ZendMvcControllerPluginManager
     {
         $this->mapping[$name] = $plugin;
     }
+
+    public function setServiceLocator(ContainerInterface $container)
+    {
+        $this->creationContext = $container;
+    }
+
+    public function getServiceLocator()
+    {
+        return $this->creationContext;
+    }
 }
