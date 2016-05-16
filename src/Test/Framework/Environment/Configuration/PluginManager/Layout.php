@@ -11,8 +11,6 @@ class Layout implements ConfigurationInterface
 
     public function configure($object, array $options = [])
     {
-        $options = array_merge(['dispatch' => 'layout/empty'], $options);
-
         $mock = $this->getTestCase()->getMockBuilder('Zend\Mvc\Controller\Plugin\Layout')
                      ->disableOriginalConstructor()
                      ->getMock();
