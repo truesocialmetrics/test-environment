@@ -12,6 +12,11 @@ class ServiceLocatorTest extends PHPUnit_Framework_TestCase
         $observer = $this->getMockBuilder('Zend\Mvc\Controller\AbstractController')
                      ->disableOriginalConstructor()
                      ->getMock();
+
+        if (!method_exists($observer, 'setServiceLocator')) {
+            $this->markTestSkipped('This test is aplicable only for zend-mvc <= 2.6.3');
+        }
+
         $observer->expects($this->once())
                          ->method('setServiceLocator')
                          ->with($this->equalTo(new ServiceManagerMock()));
