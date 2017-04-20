@@ -2,7 +2,7 @@
 
 namespace Test\Framework\Environment\Configuration;
 
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 trait ConfigurationTestCaseTrait
 {

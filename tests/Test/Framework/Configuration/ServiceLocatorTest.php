@@ -2,12 +2,12 @@
 
 namespace Test\Framework\Environment\Configuration;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Test\Framework\Environment\Stub\ServiceManager\ServiceManager as ServiceManagerMock;
 
 require_once __DIR__ . '/_files/ServiceLocatorAwareMock.php';
 
-class ServiceLocatorTest extends PHPUnit_Framework_TestCase
+class ServiceLocatorTest extends TestCase
 {
     public function test()
     {

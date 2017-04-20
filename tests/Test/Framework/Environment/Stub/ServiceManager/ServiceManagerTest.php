@@ -2,9 +2,9 @@
 
 namespace Test\Framework\Environment\Stub\ServiceManager;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class ServiceManagerMockTest extends PHPUnit_Framework_TestCase
+class ServiceManagerMockTest extends TestCase
 {
     public function test()
     {

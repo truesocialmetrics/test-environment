@@ -2,9 +2,9 @@
 
 namespace Test\Framework\Environment;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class StubTest extends PHPUnit_Framework_TestCase
+class StubTest extends TestCase
 {
     public function testConstruct()
     {

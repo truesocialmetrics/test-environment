@@ -23,8 +23,8 @@
         "zendframework/zend-cache": "*"
     },
     "autoload": {
-        "psr-0": {
-            "Test": "src/"
+        "psr-4": {
+            "Test\\": "src/Test"
         }
     }
 }
