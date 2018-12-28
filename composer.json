@@ -1,9 +1,9 @@
 {
-    "name": "necromant2005/tt-test",
+    "name": "truesocialmetrics/test-environment",
     "type": "library",
     "description": "zf test environment",
     "keywords": ["zf", "zf2", "test", "test case", "environment"],
-    "homepage": "https://github.com/necromant2005/tt-test",
+    "homepage": "https://github.com/truesocialmetrics/test-environment",
     "license": "MIT",
     "authors": [
         {
