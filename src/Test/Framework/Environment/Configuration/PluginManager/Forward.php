@@ -11,7 +11,7 @@ class Forward implements ConfigurationInterface
 
     public function configure($object, array $options = [])
     {
-        $stub = $this->getTestCase()->getMockBuilder('Zend\Mvc\Controller\Plugin\Forward')
+        $stub = $this->getTestCase()->getMockBuilder('Laminas\Mvc\Controller\Plugin\Forward')
                      ->disableOriginalConstructor()
                      ->getMock();
 

@@ -14,13 +14,13 @@
         }
     ],
     "require": {
-        "php": ">=7",
-        "zendframework/zend-mvc": "*",
-        "zendframework/zend-servicemanager": "*",
-        "zendframework/zend-eventmanager": "*",
-        "zendframework/zend-session": "*",
-        "zendframework/zend-http": "*",
-        "zendframework/zend-cache": "*"
+        "php": ">=7.4",
+        "laminas/laminas-mvc": "*",
+        "laminas/laminas-servicemanager": "*",
+        "laminas/laminas-eventmanager": "*",
+        "laminas/laminas-session": "*",
+        "laminas/laminas-http": "*",
+        "laminas/laminas-cache": "*"
     },
     "autoload": {
         "psr-4": {

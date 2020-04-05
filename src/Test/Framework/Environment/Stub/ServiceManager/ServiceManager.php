@@ -3,7 +3,7 @@
 namespace Test\Framework\Environment\Stub\ServiceManager;
 
 use InvalidArgumentException;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 class ServiceManager implements ServiceLocatorInterface
 {

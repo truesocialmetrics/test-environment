@@ -4,8 +4,8 @@ namespace Test\Framework\Environment\Configuration\ServiceLocator;
 
 use Test\Framework\Environment\Configuration\ConfigurationInterface;
 use Test\Framework\Environment\Configuration\ConfigurationTestCaseTrait;
-use Zend\Cache\Storage\Adapter\Memory as CacheStorageAdapterMemory;
-use Zend\Session;
+use Laminas\Cache\Storage\Adapter\Memory as CacheStorageAdapterMemory;
+use Laminas\Session;
 
 class ZendSessionContainer implements ConfigurationInterface
 {
@@ -19,6 +19,6 @@ class ZendSessionContainer implements ConfigurationInterface
         $manager->setConfig(new Session\Config\StandardConfig());
         $session = new Session\Container('Default', $manager);
 
-        $object->getServiceLocator()->set('Zend\Session\Container', $session);
+        $object->getServiceLocator()->set('Laminas\Session\Container', $session);
     }
 }

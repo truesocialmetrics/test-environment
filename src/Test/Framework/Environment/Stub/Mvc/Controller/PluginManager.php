@@ -4,7 +4,7 @@ namespace Test\Framework\Environment\Stub\Mvc\Controller;
 
 use InvalidArgumentException;
 use Interop\Container\ContainerInterface;
-use Zend\Mvc\Controller\PluginManager as ZendMvcControllerPluginManager;
+use Laminas\Mvc\Controller\PluginManager as ZendMvcControllerPluginManager;
 
 class PluginManager extends ZendMvcControllerPluginManager
 {

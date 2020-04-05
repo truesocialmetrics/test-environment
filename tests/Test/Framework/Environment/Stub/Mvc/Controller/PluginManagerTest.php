@@ -15,12 +15,15 @@ class ServiceManagerMockTest extends TestCase
         $this->assertEquals('abc', $mock->get('test'));
     }
 
-    /**
-     * @expectedException InvalidArgumentException
-     */
     public function testNonExists()
     {
-        $mock = new PluginManager();
-        $mock->get('test');
+        try {
+            $mock = new PluginManager();
+            $this->assertFalse($mock->has('test'));
+            $mock->get('test');
+            $this->assertTrue(false, 'Excepted InvalidArgumentException');
+        } catch (\InvalidArgumentException $e) {
+            $this->assertTrue(true);
+        }
     }
 }

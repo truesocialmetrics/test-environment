@@ -3,8 +3,8 @@
 namespace Test\Framework\Environment\Configuration;
 
 use ReflectionClass;
-use Zend\Http\PhpEnvironment\Request as HttpEnvironmentRequest;
-use Zend\Stdlib\Parameters;
+use Laminas\Http\PhpEnvironment\Request as HttpEnvironmentRequest;
+use Laminas\Stdlib\Parameters;
 
 class Request implements ConfigurationInterface
 {

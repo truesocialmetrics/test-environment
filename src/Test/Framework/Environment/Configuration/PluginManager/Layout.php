@@ -11,7 +11,7 @@ class Layout implements ConfigurationInterface
 
     public function configure($object, array $options = [])
     {
-        $mock = $this->getTestCase()->getMockBuilder('Zend\Mvc\Controller\Plugin\Layout')
+        $mock = $this->getTestCase()->getMockBuilder('Laminas\Mvc\Controller\Plugin\Layout')
                      ->disableOriginalConstructor()
                      ->getMock();
 

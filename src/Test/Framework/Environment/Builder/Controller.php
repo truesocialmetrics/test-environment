@@ -13,10 +13,10 @@ class Controller extends Builder
             ['name' => 'Response'],
             // ['name' => 'ServiceLocator'],
             // ['name' => 'ServiceLocator|Di'],
-            // ['name' => 'ServiceLocator|Zend\Session\Container'],
+            // ['name' => 'ServiceLocator|Laminas\Session\Container'],
             // ['name'    => 'ServiceLocator|Stub',
             //  'options' => [
-            //     'class' => 'Zend\Config\Config',
+            //     'class' => 'Laminas\Config\Config',
             //     'alias' => 'config',
             // ], ],
             ['name' => 'PluginManager'],

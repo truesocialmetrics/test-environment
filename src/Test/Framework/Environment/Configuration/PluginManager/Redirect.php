@@ -11,7 +11,7 @@ class Redirect implements ConfigurationInterface
 
     public function configure($object, array $options = [])
     {
-        $stub = $this->getTestCase()->getMockBuilder('Zend\Mvc\Controller\Plugin\Redirect')
+        $stub = $this->getTestCase()->getMockBuilder('Laminas\Mvc\Controller\Plugin\Redirect')
                      ->disableOriginalConstructor()
                      ->getMock();
 

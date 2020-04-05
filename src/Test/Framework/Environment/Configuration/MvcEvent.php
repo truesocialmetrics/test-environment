@@ -3,8 +3,8 @@
 namespace Test\Framework\Environment\Configuration;
 
 use ReflectionClass;
-use Zend\Mvc\MvcEvent as ZendMvcEvent;
-use Zend\Stdlib\Parameters;
+use Laminas\Mvc\MvcEvent as ZendMvcEvent;
+use Laminas\Stdlib\Parameters;
 
 class MvcEvent implements ConfigurationInterface
 {
