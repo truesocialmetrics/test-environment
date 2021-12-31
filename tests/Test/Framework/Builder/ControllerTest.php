@@ -14,7 +14,7 @@ class ControllerTest extends TestCase
         $service = new Controller($this);
         $service->build($observer, []);
         $this->assertInstanceOf('Test\Framework\Environment\Stub\Mvc\Controller\PluginManager', $observer->getPluginManager());
-        $this->assertInstanceOf('Zend\Http\PhpEnvironment\Request', $observer->getRequest());
-        $this->assertInstanceOf('Zend\Http\PhpEnvironment\Response', $observer->getResponse());
+        $this->assertInstanceOf('Laminas\Http\PhpEnvironment\Request', $observer->getRequest());
+        $this->assertInstanceOf('Laminas\Http\PhpEnvironment\Response', $observer->getResponse());
     }
 }

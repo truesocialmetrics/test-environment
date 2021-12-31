@@ -7,7 +7,7 @@ use Test\Framework\Environment\Configuration\ConfigurationTestCaseTrait;
 use Laminas\Cache\Storage\Adapter\Memory as CacheStorageAdapterMemory;
 use Laminas\Session;
 
-class ZendSessionContainer implements ConfigurationInterface
+class LaminasSessionContainer implements ConfigurationInterface
 {
     use ConfigurationTestCaseTrait;
 

@@ -3,7 +3,7 @@
 namespace Test\Framework\Environment\Configuration;
 
 use ReflectionClass;
-use Laminas\Mvc\MvcEvent as ZendMvcEvent;
+use Laminas\Mvc\MvcEvent as LaminasMvcEvent;
 use Laminas\Stdlib\Parameters;
 
 class MvcEvent implements ConfigurationInterface
@@ -13,7 +13,7 @@ class MvcEvent implements ConfigurationInterface
         $reflectionClass = new ReflectionClass($object);
         $reflectionProperty = $reflectionClass->getProperty('event');
         $reflectionProperty->setAccessible(true);
-        $reflectionProperty->setValue($object, new ZendMvcEvent());
+        $reflectionProperty->setValue($object, new LaminasMvcEvent());
 
         foreach ($options as $method => $parameters) {
             $methodName = 'set' . ucfirst($method);

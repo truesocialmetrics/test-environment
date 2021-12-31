@@ -2,7 +2,7 @@
 
 namespace Test\Framework\Environment\Builder;
 
-use Zend\Mvc\Controller\AbstractActionController;
+use Laminas\Mvc\Controller\AbstractActionController;
 
 class ControllerStub extends AbstractActionController
 {
