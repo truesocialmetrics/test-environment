@@ -3,6 +3,7 @@
 namespace Test\Framework\Environment;
 
 use Test\Framework\Environment\Configuration\ConfigurationTestCaseTrait;
+use PHPUnit\Framework\MockObject\Generator\Generator as MockGenerator;
 
 class Stub
 {
@@ -16,12 +17,19 @@ class Stub
         $options = array_merge([
             self::FIELD_METHODS => [],
         ], $options);
-        $stub = $this->getTestCase()->getMockBuilder($options[self::FIELD_CLASS])
-                     ->disableOriginalConstructor()
-                     ->getMock();
-        foreach ($options[self::FIELD_METHODS] as $method => $value) {
-            $stub->method($method)
-                 ->willReturn($value);
+
+        $stub = (new MockGenerator)->testDouble(
+            $options[self::FIELD_CLASS],
+            true,
+            false,
+            callOriginalConstructor: false,
+            callOriginalClone: false,
+            cloneArguments: false,
+            allowMockingUnknownTypes: false,
+        );
+
+        foreach ($options[self::FIELD_METHODS] as $method => $return) {
+            $stub->method($method)->willReturn($return);
         }
 
         return $stub;

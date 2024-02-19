@@ -4,7 +4,7 @@ namespace Test\Framework\Environment\Stub\Mvc\Controller;
 
 use PHPUnit\Framework\TestCase;
 
-class ServiceManagerMockTest extends TestCase
+class PluginManagerTest extends TestCase
 {
     public function test()
     {

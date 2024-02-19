@@ -4,6 +4,7 @@ namespace Test\Framework\Environment\Configuration\PluginManager;
 
 use Test\Framework\Environment\Configuration\ConfigurationInterface;
 use Test\Framework\Environment\Configuration\ConfigurationTestCaseTrait;
+use PHPUnit\Framework\MockObject\Generator\Generator as MockGenerator;
 
 class Forward implements ConfigurationInterface
 {
@@ -11,14 +12,19 @@ class Forward implements ConfigurationInterface
 
     public function configure($object, array $options = [])
     {
-        $stub = $this->getTestCase()->getMockBuilder('Laminas\Mvc\Controller\Plugin\Forward')
-                     ->disableOriginalConstructor()
-                     ->getMock();
+        $stub = (new MockGenerator)->testDouble(
+            'Laminas\Mvc\Controller\Plugin\Forward',
+            true,
+            false,
+            callOriginalConstructor: false,
+            callOriginalClone: false,
+            cloneArguments: false,
+            allowMockingUnknownTypes: false,
+        );
+        $stub->method('dispatch')->willReturnCallback(function () {
+            return func_get_args();
+        });
 
-        $stub->method('dispatch')
-             ->will($this->getTestCase()->returnCallback(function () {
-                return func_get_args();
-             }));
         $object->getPluginManager()->set('forward', $stub);
     }
 }

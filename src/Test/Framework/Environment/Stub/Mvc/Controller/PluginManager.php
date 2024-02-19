@@ -67,7 +67,7 @@ class PluginManager extends LaminasMvcControllerPluginManager
         return $plugin;
     }
 
-    public function has($name)
+    public function has($name, $checkAbstractFactories = true, $usePeeringServiceManagers = true)
     {
         return array_key_exists($name, $this->mapping);
     }
