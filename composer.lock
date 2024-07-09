@@ -528,7 +528,7 @@
             "version": "2.5.5",
             "source": {
                 "type": "git",
-                "url": "git@github.com:laminas/laminas-inputfilter.git",
+                "url": "https://github.com/laminas/laminas-inputfilter.git",
                 "reference": "d66548f0cb1a6d4fafb2abae11474a5ccb090163"
             },
             "dist": {
@@ -585,6 +585,12 @@
                 "rss": "https://github.com/laminas/laminas-inputfilter/releases.atom",
                 "source": "https://github.com/laminas/laminas-inputfilter"
             },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
             "time": "2019-12-31T17:13:02+00:00"
         },
         {
